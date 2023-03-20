@@ -1,12 +1,13 @@
-import { Flex } from "@chakra-ui/react";
-import Header from "../components/Header";
+import React from "react";
+import { Outlet } from "react-router-dom";
 
-function Home() {
+const Home = () => {
   return (
-    <Flex w="100%" h="100vh" direction="column">
-      <Header />
-    </Flex>
+    <div>
+      <h1>Hello from Home</h1>
+      <Outlet />
+    </div>
   );
-}
+};
 
 export default Home;
