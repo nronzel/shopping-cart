@@ -1,24 +1,11 @@
-import { useState } from "react";
-import viteLogo from "/vite.svg";
+import { Flex } from "@chakra-ui/react";
+import Header from "../components/Header";
 
 function Home() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div>
-      <h1>Store</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/routes/Home.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    <Flex w="100%" h="100vh" direction="column">
+      <Header />
+    </Flex>
   );
 }
 
