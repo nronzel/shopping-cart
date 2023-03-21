@@ -2,6 +2,7 @@ import React from "react";
 import { Flex, Heading, Spacer } from "@chakra-ui/react";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ThemeSwitcher from "../utils/ThemeSwitcher"
 
 const Header = () => {
   return (
@@ -15,6 +16,7 @@ const Header = () => {
         <a href="/cart">
           <FontAwesomeIcon icon={faCartShopping} />
         </a>
+      <ThemeSwitcher />
       </Flex>
     </Flex>
   );
