@@ -1,5 +1,7 @@
 import React from "react";
 import { Flex, Heading, Spacer } from "@chakra-ui/react";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Header = () => {
   return (
@@ -9,8 +11,10 @@ const Header = () => {
           <a href="/">TotallyLegitStore</a>
         </Heading>
         <Spacer />
-        <a href="/products">Products</a>
-        <a href="/cart">Cart</a>
+        <a href="/products">Shop</a>
+        <a href="/cart">
+          <FontAwesomeIcon icon={faCartShopping} />
+        </a>
       </Flex>
     </Flex>
   );
