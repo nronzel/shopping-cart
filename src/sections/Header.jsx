@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Heading, Spacer } from "@chakra-ui/react";
+import { Flex, HStack, Heading, Spacer } from "@chakra-ui/react";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ThemeSwitcher from "../utils/ThemeSwitcher"
@@ -12,10 +12,12 @@ const Header = () => {
           <a href="/">TotallyLegitStore</a>
         </Heading>
         <Spacer />
+      <HStack mr={15} spacing={5}>
         <a href="/products">Shop</a>
         <a href="/cart">
           <FontAwesomeIcon icon={faCartShopping} />
         </a>
+      </HStack>
       <ThemeSwitcher />
       </Flex>
     </Flex>
