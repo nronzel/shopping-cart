@@ -13,6 +13,7 @@ const Header = () => {
             alignItems="center"
             borderBottom="4px solid"
             borderColor={useColorModeValue("pink.400", "pink.100")}
+            flexShrink="0"
         >
             <Flex
                 w="80%"
@@ -25,12 +26,13 @@ const Header = () => {
                     cursor="default"
                     bgClip="text"
                     bgGradient="linear-gradient(90deg, rgba(227,68,227,1) 0%, rgba(253,29,29,1) 100%)"
+                    fontSize="4xl"
                 >
                     <a href="/">
                         keebstore
                     </a>
                 </Heading>
-                <Text><a href="/products">shop</a></Text>
+                <Text fontSize="md"><a href="/products">shop</a></Text>
                 <HStack mr={17} spacing={5}>
                     <a href="/cart">
                         <FontAwesomeIcon icon={faCartShopping} />
