@@ -1,4 +1,4 @@
-import { Flex } from "@chakra-ui/react";
+import { Flex, Grid } from "@chakra-ui/react";
 import React from "react";
 import { Outlet } from "react-router-dom";
 import HomepageHero from "../components/HomepageHero";
@@ -8,7 +8,9 @@ const Home = () => {
     return (
         <Flex direction="column">
             <HomepageHero />
-            <Flex>
+            <Grid
+                gridTemplateColumns={{ sm: "1fr 1fr", lg: "1fr 1fr 1fr 1fr" }}
+            >
                 <CategoryCards
                     imgSource="/categories/switches.jpg"
                     hoverText="switches"
@@ -26,7 +28,7 @@ const Home = () => {
                     hoverText="cables"
                 />
                 <Outlet />
-            </Flex>
+            </Grid>
         </Flex>
     );
 };
