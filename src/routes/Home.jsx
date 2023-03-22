@@ -1,12 +1,12 @@
 import { Flex } from "@chakra-ui/react";
 import React from "react";
 import { Outlet } from "react-router-dom";
-import HomepageImage from "../components/HomepageImage";
+import HomepageHero from "../components/HomepageHero";
 
 const Home = () => {
     return (
         <Flex direction="column">
-            <HomepageImage />
+            <HomepageHero />
             <Outlet />
         </Flex>
     );
