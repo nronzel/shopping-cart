@@ -1,13 +1,15 @@
+import { Flex } from "@chakra-ui/react";
 import React from "react";
 import { Outlet } from "react-router-dom";
+import HomepageImage from "../components/HomepageImage";
 
 const Home = () => {
-  return (
-    <div>
-      <h1>Hello from Home</h1>
-      <Outlet />
-    </div>
-  );
+    return (
+        <Flex direction="column">
+            <HomepageImage />
+            <Outlet />
+        </Flex>
+    );
 };
 
 export default Home;
