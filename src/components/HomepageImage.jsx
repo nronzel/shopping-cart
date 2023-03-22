@@ -1,7 +1,7 @@
-import { Box, Button, Image, Link } from '@chakra-ui/react'
+import { Box, Button, Heading, Image, Link, Flex, Text } from '@chakra-ui/react'
 import React from 'react'
 
-const HomepageImage = () => {
+const HomepageHero = () => {
     return (
         <Box position="relative">
             <Image
@@ -11,19 +11,33 @@ const HomepageImage = () => {
                 objectFit="cover"
                 alt="keyboard"
             />
-            <Link href="/products">
-                <Button
-                    position="absolute"
-                    top="150"
-                    left="50%"
-                    transform="translate(-50%, -50%)"
-                    colorScheme="pink"
+            <Flex
+                position="absolute"
+                top="10%"
+                left="10%"
+                direction="column"
+                gap={3}
+                h="150px"
+            >
+                <Heading
+                    fontSize="5xl"
                 >
-                    shop now
-                </Button>
-            </Link>
-        </Box>
+                    sale ends soon!
+                </Heading>
+                <Text mt="-15px">
+                    get the hottest keyboards and accessories before they are gone.
+                </Text>
+                <Link href="/products">
+                    <Button
+                        colorScheme="pink"
+                    >
+                        shop now
+                    </Button>
+                </Link>
+
+            </Flex>
+        </Box >
     )
 };
 
-export default HomepageImage
+export default HomepageHero
