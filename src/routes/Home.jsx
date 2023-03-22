@@ -9,10 +9,22 @@ const Home = () => {
         <Flex direction="column">
             <HomepageHero />
             <Flex>
-                <CategoryCards imgSource="/categories/switches.jpg" />
-                <CategoryCards imgSource="/categories/chasis.jpg" />
-                <CategoryCards imgSource="/categories/keycaps.jpg" />
-                <CategoryCards imgSource="/categories/cables.jpg" />
+                <CategoryCards
+                    imgSource="/categories/switches.jpg"
+                    hoverText="switches"
+                />
+                <CategoryCards
+                    imgSource="/categories/chasis.jpg"
+                    hoverText="chasis"
+                />
+                <CategoryCards
+                    imgSource="/categories/keycaps.jpg"
+                    hoverText="keycaps"
+                />
+                <CategoryCards
+                    imgSource="/categories/cables.jpg"
+                    hoverText="cables"
+                />
                 <Outlet />
             </Flex>
         </Flex>
