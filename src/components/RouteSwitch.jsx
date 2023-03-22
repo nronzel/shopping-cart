@@ -6,13 +6,13 @@ import Cart from "../routes/Cart";
 import Products from "../routes/Products";
 
 export default function RouteSwitch() {
-  return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/products" element={<Products />} />
-      </Route>
-    </Routes>
-  );
+    return (
+        <Routes>
+            <Route path="/" element={<Layout />}>
+                <Route index element={<Home />} />
+                <Route path="/cart" element={<Cart />} />
+                <Route path="/products" element={<Products />} />
+            </Route>
+        </Routes>
+    );
 }
