@@ -23,13 +23,12 @@ const Header = () => {
             >
                 <Heading
                     cursor="default"
-                    color={useColorModeValue("pink.400", "pink.100")}
+                    bgClip="text"
+                    bgGradient="linear-gradient(90deg, rgba(227,68,227,1) 0%, rgba(253,29,29,1) 100%)"
                 >
-                    <Text >
-                        <a href="/">
-                            keebstore
-                        </a>
-                    </Text>
+                    <a href="/">
+                        keebstore
+                    </a>
                 </Heading>
                 <Text><a href="/products">shop</a></Text>
                 <HStack mr={17} spacing={5}>
