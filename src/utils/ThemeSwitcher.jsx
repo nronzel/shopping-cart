@@ -8,7 +8,7 @@ function ThemeSwitcher() {
         <Button
             onClick={toggleColorMode}
             p="2px 4px"
-            size="sm"
+            size="lg"
             bgColor="transparent"
         >
             {colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
