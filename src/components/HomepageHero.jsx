@@ -3,13 +3,14 @@ import React from 'react'
 
 const HomepageHero = () => {
     return (
-        <Box position="relative">
+        <Box position="relative" draggable="false" userSelect="none">
             <Image
                 h="750px"
                 w="100vw"
                 src="/bg.jpg"
                 objectFit="cover"
                 alt="keyboard"
+                draggable="false"
             />
             <Flex
                 position="absolute"
