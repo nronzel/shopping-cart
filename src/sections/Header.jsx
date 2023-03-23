@@ -29,6 +29,7 @@ const Header = () => {
                 zIndex="1"
             >
                 <Flex
+                    maxW="1200px"
                     w="80%"
                     gap={6}
                     justifyContent="space-between"
@@ -44,10 +45,10 @@ const Header = () => {
                             keebstore
                         </a>
                     </Heading>
-                    <Text fontSize="md"><a href="/products">shop</a></Text>
+                    <Text fontSize="lg"><a href="/products">shop</a></Text>
                     <HStack mr={17} spacing={5}>
                         <a href="/cart">
-                            <FontAwesomeIcon icon={faCartShopping} />
+                            <FontAwesomeIcon icon={faCartShopping} size="lg" />
                         </a>
                         <ThemeSwitcher />
                     </HStack>
