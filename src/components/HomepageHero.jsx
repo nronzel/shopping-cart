@@ -29,6 +29,8 @@ const HomepageHero = () => {
                 <Text mt="-25px" color="white">
                     get the hottest keyboards and accessories before they are gone.
                 </Text>
+                {/* width is set to prevent the link from being clickable 
+                    outside of the buttons area */}
                 <Link href="/products" w="50px">
                     <Button
                         colorScheme="pink"
