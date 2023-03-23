@@ -1,4 +1,4 @@
-import { Box, Button, Heading, Image, Link, Flex, Text, Divider } from '@chakra-ui/react'
+import { Box, Button, Heading, Image, Link, Flex, Text } from '@chakra-ui/react'
 import React from 'react'
 
 const HomepageHero = () => {
@@ -29,9 +29,10 @@ const HomepageHero = () => {
                 <Text mt="-25px" color="white">
                     get the hottest keyboards and accessories before they are gone.
                 </Text>
-                <Link href="/products">
+                <Link href="/products" w="50px">
                     <Button
                         colorScheme="pink"
+                        size="lg"
                     >
                         shop now
                     </Button>
