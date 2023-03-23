@@ -1,15 +1,11 @@
 import React from "react";
-import { Box, Flex, HStack, Heading, Text, useColorModeValue } from "@chakra-ui/react";
+import { Flex, HStack, Heading, Text, useColorModeValue } from "@chakra-ui/react";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ThemeSwitcher from "../utils/ThemeSwitcher"
 
 const Header = () => {
     const gradientBg = "linear-gradient(90deg, rgba(227,68,227,1) 0%, rgba(253,29,29,1) 100%)"
-
-    const borderStyle = {
-        backgroundImage: gradientBg
-    };
 
     return (
         <Flex
