@@ -1,4 +1,4 @@
-import { Box, Image } from "@chakra-ui/react";
+import { Box, Image, Link } from "@chakra-ui/react";
 import React, { useState } from "react";
 
 const CategoryCards = ({ imgSource, hoverText }) => {
@@ -22,16 +22,18 @@ const CategoryCards = ({ imgSource, hoverText }) => {
       userSelect="none"
       draggable="false"
     >
-      <Image
-        h="100%"
-        objectFit="cover"
-        alt={imgSource}
-        src={imgSource}
-        filter={isHovering ? "blur(5px)" : "none"}
-        transition="filter 0.5s ease"
-        draggable="false"
-        userSelect="none"
-      />
+      <Link href="/products">
+        <Image
+          h="100%"
+          objectFit="cover"
+          alt={imgSource}
+          src={imgSource}
+          filter={isHovering ? "blur(5px)" : "none"}
+          transition="filter 0.5s ease"
+          draggable="false"
+          userSelect="none"
+        />
+      </Link>
       {isHovering && (
         <Box
           position="absolute"
