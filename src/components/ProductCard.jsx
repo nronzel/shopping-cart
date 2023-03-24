@@ -44,9 +44,9 @@ const ProductCard = ({ productTitle, imgSource, price }) => {
       <Divider />
       <CardFooter>
         <ButtonGroup>
-          <Button variant="solid" colorScheme="pink">Add to cart</Button>
+          <Button variant="solid" colorScheme="pink">add to cart</Button>
           <Button variant="outline" fontWeight="normal">
-            Details
+            details
           </Button>
         </ButtonGroup>
       </CardFooter>
