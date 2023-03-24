@@ -36,5 +36,17 @@ describe("Product card renders", () => {
     const displayedImage = document.querySelector("img");
     expect(displayedImage.src).toContain("/products/product1.jpg");
   });
-});
 
+  it("matches the snapshot", () => {
+    const { container } = render(
+      <ChakraProvider>
+        <ProductCard
+          imgSource={product[0].src}
+          price={product[0].price}
+          productTitle={product[0].name}
+        />
+      </ChakraProvider>
+    );
+    expect(container).toMatchSnapshot();
+  });
+});

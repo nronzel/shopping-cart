@@ -1,0 +1,68 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Product card renders > matches the snapshot 1`] = `
+<div>
+  <div
+    class="chakra-card css-m47irm"
+  >
+    <div
+      class="chakra-card__body css-1idwstw"
+    >
+      <img
+        alt="product image"
+        class="chakra-image css-aucjl3"
+        src="/public/products/product1.jpg"
+      />
+      <div
+        class="chakra-stack css-t7aooi"
+      >
+        <h2
+          class="chakra-heading css-18j379d"
+        >
+          product 1
+        </h2>
+        <p
+          class="chakra-text css-eefv6g"
+        >
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor in dolorem fugit quo obcaecati facere!
+        </p>
+        <p
+          class="chakra-text css-1bpuy0u"
+        >
+          75
+        </p>
+      </div>
+    </div>
+    <hr
+      aria-orientation="horizontal"
+      class="chakra-divider css-svjswr"
+    />
+    <div
+      class="chakra-card__footer css-1a7q9t8"
+    >
+      <div
+        class="chakra-button__group css-1ind3v2"
+        data-orientation="horizontal"
+        role="group"
+      >
+        <button
+          class="chakra-button css-9qq7ve"
+          type="button"
+        >
+          Add to cart
+        </button>
+        <button
+          class="chakra-button css-11kckzb"
+          type="button"
+        >
+          Details
+        </button>
+      </div>
+    </div>
+  </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
+</div>
+`;
