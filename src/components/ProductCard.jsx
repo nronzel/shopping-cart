@@ -34,7 +34,7 @@ const ProductCard = ({ productTitle, imgSource, price }) => {
           </Text>
           <Text
             color={useColorModeValue("pink.500", "pink.200")}
-            fontSize="lg"
+            fontSize="xl"
             fontWeight="bold"
           >
             {price}
