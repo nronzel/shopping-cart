@@ -37,6 +37,10 @@ describe("Product card renders", () => {
     expect(displayedImage.src).toContain("/products/product1.jpg");
   });
 
+  it("renders add to cart button", () => {
+    expect(screen.getByText(/Add to cart/i)).toBeInTheDocument();
+  });
+
   it("matches the snapshot", () => {
     const { container } = render(
       <ChakraProvider>
