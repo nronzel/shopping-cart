@@ -1,11 +1,18 @@
 import React from "react";
-import { Flex, HStack, Heading, Text, useColorModeValue } from "@chakra-ui/react";
+import {
+    Flex,
+    HStack,
+    Heading,
+    Text,
+    useColorModeValue,
+} from "@chakra-ui/react";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import ThemeSwitcher from "../utils/ThemeSwitcher"
+import ThemeSwitcher from "../utils/ThemeSwitcher";
 
 const Header = () => {
-    const gradientBg = "linear-gradient(90deg, rgba(227,68,227,1) 0%, rgba(253,29,29,1) 100%)"
+    const gradientBg =
+        "linear-gradient(90deg, rgba(227,68,227,1) 0%, rgba(253,29,29,1) 100%)";
 
     return (
         <Flex
@@ -37,11 +44,11 @@ const Header = () => {
                         bgGradient={gradientBg}
                         fontSize="4xl"
                     >
-                        <a href="/">
-                            keebstore
-                        </a>
+                        <a href="/">keebstore</a>
                     </Heading>
-                    <Text fontSize="lg"><a href="/products">shop</a></Text>
+                    <Text fontSize="lg">
+                        <a href="/products">shop</a>
+                    </Text>
                     <HStack mr={17} spacing={5}>
                         <a href="/cart">
                             <FontAwesomeIcon icon={faCartShopping} size="lg" />
@@ -50,7 +57,7 @@ const Header = () => {
                     </HStack>
                 </Flex>
             </Flex>
-        </Flex >
+        </Flex>
     );
 };
 
