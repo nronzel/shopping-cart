@@ -1,8 +1,8 @@
-import { Text } from "@chakra-ui/react";
 import React from "react";
+import ProductGrid from "../components/ProductGrid";
 
 const Products = () => {
-  return <Text>Product Page</Text>;
+  return <ProductGrid />;
 };
 
 export default Products;
