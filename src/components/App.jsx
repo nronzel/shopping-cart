@@ -3,11 +3,11 @@ import { BrowserRouter } from "react-router-dom";
 import RouteSwitch from "./RouteSwitch";
 
 const App = () => {
-    return (
-        <BrowserRouter>
-            <RouteSwitch />
-        </BrowserRouter>
-    );
+  return (
+    <BrowserRouter>
+      <RouteSwitch />
+    </BrowserRouter>
+  );
 };
 
 export default App;
