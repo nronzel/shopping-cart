@@ -17,7 +17,7 @@ const ProductGrid = () => {
 
   return (
     <Box maxW="1200px">
-      <Heading mt={3} textAlign="center">All Products</Heading>
+      <Heading mt={3} textAlign="center">all products</Heading>
       <Flex wrap="wrap" gap={5} mt={5} w="100%" justifyContent="center">
         {products.map((product, index) => (
           <ProductCard
