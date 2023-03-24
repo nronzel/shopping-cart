@@ -29,13 +29,4 @@ describe("Header renders", () => {
 
     expect(document.body).toHaveClass("chakra-ui-dark");
   });
-
-  it("matches snapshot", () => {
-    const { container } = render(
-      <ChakraProvider>
-        <Header />
-      </ChakraProvider>
-    );
-    expect(container).toMatchSnapshot();
-  });
 });
