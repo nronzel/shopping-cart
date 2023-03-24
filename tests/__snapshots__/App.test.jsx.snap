@@ -119,45 +119,65 @@ exports[`App test > Render the app 1`] = `
           class="css-1k5rtfp"
           draggable="false"
         >
-          <img
-            alt="/categories/switches.jpg"
-            class="chakra-image css-1dnjb3l"
-            draggable="false"
-            src="/categories/switches.jpg"
-          />
+          <a
+            class="chakra-link css-spn4bz"
+            href="/products"
+          >
+            <img
+              alt="/categories/switches.jpg"
+              class="chakra-image css-1dnjb3l"
+              draggable="false"
+              src="/categories/switches.jpg"
+            />
+          </a>
         </div>
         <div
           class="css-1k5rtfp"
           draggable="false"
         >
-          <img
-            alt="/categories/chasis.jpg"
-            class="chakra-image css-1dnjb3l"
-            draggable="false"
-            src="/categories/chasis.jpg"
-          />
+          <a
+            class="chakra-link css-spn4bz"
+            href="/products"
+          >
+            <img
+              alt="/categories/chasis.jpg"
+              class="chakra-image css-1dnjb3l"
+              draggable="false"
+              src="/categories/chasis.jpg"
+            />
+          </a>
         </div>
         <div
           class="css-1k5rtfp"
           draggable="false"
         >
-          <img
-            alt="/categories/keycaps.jpg"
-            class="chakra-image css-1dnjb3l"
-            draggable="false"
-            src="/categories/keycaps.jpg"
-          />
+          <a
+            class="chakra-link css-spn4bz"
+            href="/products"
+          >
+            <img
+              alt="/categories/keycaps.jpg"
+              class="chakra-image css-1dnjb3l"
+              draggable="false"
+              src="/categories/keycaps.jpg"
+            />
+          </a>
         </div>
         <div
           class="css-1k5rtfp"
           draggable="false"
         >
-          <img
-            alt="/categories/cables.jpg"
-            class="chakra-image css-1dnjb3l"
-            draggable="false"
-            src="/categories/cables.jpg"
-          />
+          <a
+            class="chakra-link css-spn4bz"
+            href="/products"
+          >
+            <img
+              alt="/categories/cables.jpg"
+              class="chakra-image css-1dnjb3l"
+              draggable="false"
+              src="/categories/cables.jpg"
+            />
+          </a>
         </div>
       </div>
     </div>
