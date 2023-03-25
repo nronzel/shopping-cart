@@ -1,64 +1,75 @@
 import React from "react";
 import {
-    Flex,
-    HStack,
-    Heading,
-    Text,
-    useColorModeValue,
+  Box,
+  Button,
+  Flex,
+  HStack,
+  Heading,
+  Link,
+  Text,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ThemeSwitcher from "../utils/ThemeSwitcher";
 
 const Header = () => {
-    const gradientBg =
-        "linear-gradient(90deg, rgba(227,68,227,1) 0%, rgba(253,29,29,1) 100%)";
+  const gradientBg =
+    "linear-gradient(90deg, rgba(227,68,227,1) 0%, rgba(253,29,29,1) 100%)";
 
-    return (
+  return (
+    <Flex
+      w="100%"
+      justifyContent="center"
+      h="75px"
+      alignItems="flex-start"
+      bgGradient={gradientBg}
+      flexShrink="0"
+      zIndex="0"
+    >
+      <Flex
+        w="100%"
+        bgColor={useColorModeValue("gray.100", "gray.800")}
+        h="71px"
+        justifyContent="center"
+        alignItems="center"
+        zIndex="1"
+      >
         <Flex
-            w="100%"
-            justifyContent="center"
-            h="75px"
-            alignItems="flex-start"
-            bgGradient={gradientBg}
-            flexShrink="0"
-            zIndex="0"
+          maxW="1200px"
+          w="80%"
+          gap={6}
+          justifyContent="space-between"
+          alignItems="center"
         >
-            <Flex
-                w="100%"
-                bgColor={useColorModeValue("gray.100", "gray.800")}
-                h="71px"
-                justifyContent="center"
-                zIndex="1"
-            >
-                <Flex
-                    maxW="1200px"
-                    w="80%"
-                    gap={6}
-                    justifyContent="space-between"
-                    alignItems="center"
-                >
-                    <Heading
-                        cursor="default"
-                        bgClip="text"
-                        bgGradient={gradientBg}
-                        fontSize="4xl"
-                    >
-                        <a href="/">keebstore</a>
-                    </Heading>
-                    <Text fontSize="lg">
-                        <a href="/products">shop</a>
-                    </Text>
-                    <HStack mr={17} spacing={5}>
-                        <a href="/cart">
-                            <FontAwesomeIcon icon={faCartShopping} size="lg" />
-                        </a>
-                        <ThemeSwitcher />
-                    </HStack>
-                </Flex>
-            </Flex>
+          <Heading
+            cursor="default"
+            bgClip="text"
+            bgGradient={gradientBg}
+            fontSize="4xl"
+          >
+            <a href="/">keebstore</a>
+          </Heading>
+          <Text
+            fontSize="lg"
+            _hover={{
+              color: "pink.500",
+              textDecorationLine: "underline",
+              textDecorationThickness: "4px",
+            }}
+          >
+            <a href="/products">shop</a>
+          </Text>
+          <HStack spacing={10}>
+            <Link href="/cart">
+              <FontAwesomeIcon icon={faCartShopping} size="lg" />
+            </Link>
+            <ThemeSwitcher />
+          </HStack>
         </Flex>
-    );
+      </Flex>
+    </Flex>
+  );
 };
 
 export default Header;

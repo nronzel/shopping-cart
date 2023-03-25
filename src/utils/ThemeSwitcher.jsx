@@ -5,13 +5,12 @@ import React from "react";
 function ThemeSwitcher() {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <Button
-      onClick={toggleColorMode}
-      p="2px 4px"
-      size="lg"
-      bgColor="transparent"
-    >
-      {colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
+    <Button onClick={toggleColorMode} size="md">
+      {colorMode === "dark" ? (
+        <SunIcon fontSize="lg" />
+      ) : (
+        <MoonIcon fontSize="lg" />
+      )}
     </Button>
   );
 }
