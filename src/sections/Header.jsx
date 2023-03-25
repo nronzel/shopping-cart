@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import {
+  Button,
+  Drawer,
+  DrawerContent,
+  DrawerOverlay,
+  DrawerCloseButton,
   Flex,
   HStack,
   Heading,
-  Link,
   Text,
   useColorModeValue,
+  useDisclosure,
+  DrawerHeader,
+  DrawerBody,
+  DrawerFooter,
 } from "@chakra-ui/react";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,6 +22,11 @@ import ThemeSwitcher from "../utils/ThemeSwitcher";
 const Header = () => {
   const gradientBg =
     "linear-gradient(90deg, rgba(227,68,227,1) 0%, rgba(253,29,29,1) 100%)";
+
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = React.useRef();
+
+  const { cart, setCart } = useState([]);
 
   return (
     <Flex
@@ -59,13 +72,32 @@ const Header = () => {
             <a href="/products">shop</a>
           </Text>
           <HStack spacing={10}>
-            <Link href="/cart">
+            <Button ref={btnRef} onClick={onOpen}>
               <FontAwesomeIcon icon={faCartShopping} size="lg" />
-            </Link>
+            </Button>
             <ThemeSwitcher />
           </HStack>
         </Flex>
       </Flex>
+      <Drawer
+        isOpen={isOpen}
+        placement="right"
+        onClose={onClose}
+        finalFocusRef={btnRef}
+        size="sm"
+      >
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerHeader>your cart</DrawerHeader>
+          <DrawerCloseButton />
+          <DrawerBody>products in cart</DrawerBody>
+          <DrawerFooter>
+            <Button variant="solid" colorScheme="pink">
+              checkout
+            </Button>
+          </DrawerFooter>
+        </DrawerContent>
+      </Drawer>
     </Flex>
   );
 };

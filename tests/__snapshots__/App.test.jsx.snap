@@ -35,9 +35,9 @@ exports[`App test > Render the app 1`] = `
           <div
             class="chakra-stack css-1fkrl9x"
           >
-            <a
-              class="chakra-link css-spn4bz"
-              href="/cart"
+            <button
+              class="chakra-button css-i857na"
+              type="button"
             >
               <svg
                 aria-hidden="true"
@@ -54,8 +54,9 @@ exports[`App test > Render the app 1`] = `
                   fill="currentColor"
                 />
               </svg>
-            </a>
+            </button>
             <button
+              aria-label="toggle theme"
               class="chakra-button css-i857na"
               type="button"
             >

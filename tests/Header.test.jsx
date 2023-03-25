@@ -21,7 +21,7 @@ describe("Header renders", () => {
   });
 
   it("changes color theme", () => {
-    const button = screen.getByRole("button");
+    const button = screen.getByRole("button", { name: /toggle theme/i });
 
     expect(document.body).toHaveClass("chakra-ui-light");
 
