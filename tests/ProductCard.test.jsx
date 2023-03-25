@@ -38,7 +38,11 @@ describe("Product card renders", () => {
   });
 
   it("renders add to cart button", () => {
-    expect(screen.getByText(/Add to cart/i)).toBeInTheDocument();
+    expect(screen.getByText(/add to cart/i)).toBeInTheDocument();
+  });
+
+  it("renders details button", () => {
+    expect(screen.getByText(/details/i)).toBeInTheDocument();
   });
 
   it("matches the snapshot", () => {
