@@ -9,7 +9,7 @@ exports[`App test > Render the app 1`] = `
       class="css-1lo8p5r"
     >
       <div
-        class="css-7gyrdv"
+        class="css-2pts9x"
       >
         <div
           class="css-4d8kqp"
@@ -24,7 +24,7 @@ exports[`App test > Render the app 1`] = `
             </a>
           </h2>
           <p
-            class="chakra-text css-i3jkqk"
+            class="chakra-text css-gafbmw"
           >
             <a
               href="/products"
@@ -33,9 +33,10 @@ exports[`App test > Render the app 1`] = `
             </a>
           </p>
           <div
-            class="chakra-stack css-p73683"
+            class="chakra-stack css-1fkrl9x"
           >
             <a
+              class="chakra-link css-spn4bz"
               href="/cart"
             >
               <svg
@@ -55,11 +56,11 @@ exports[`App test > Render the app 1`] = `
               </svg>
             </a>
             <button
-              class="chakra-button css-14szi6g"
+              class="chakra-button css-i857na"
               type="button"
             >
               <svg
-                class="chakra-icon css-onkibi"
+                class="chakra-icon css-in1cf3"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
