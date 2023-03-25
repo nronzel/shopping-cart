@@ -15,7 +15,11 @@ import React from "react";
 
 const ProductCard = ({ productTitle, imgSource, price }) => {
   return (
-    <Card maxW="xs" borderRadius="xl" bgColor={useColorModeValue("gray.100", "gray.700")}>
+    <Card
+      maxW="xs"
+      borderRadius="xl"
+      bgColor={useColorModeValue("gray.100", "gray.700")}
+    >
       <CardBody>
         <Image
           h="250px"
@@ -44,7 +48,9 @@ const ProductCard = ({ productTitle, imgSource, price }) => {
       <Divider />
       <CardFooter>
         <ButtonGroup>
-          <Button variant="solid" colorScheme="pink">add to cart</Button>
+          <Button variant="solid" colorScheme="pink">
+            add to cart
+          </Button>
           <Button variant="outline" fontWeight="normal">
             details
           </Button>
