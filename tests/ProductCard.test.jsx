@@ -2,19 +2,21 @@ import { render, screen } from "@testing-library/react";
 import { ChakraProvider } from "@chakra-ui/react";
 import React from "react";
 import ProductCard from "../src/components/ProductCard";
-import product1 from "../public/products/product1.jpg";
 
-const product = [{ name: "product 1", price: "75", src: product1 }];
+const product = [
+  {
+    id: 0,
+    name: "product 1",
+    price: 75,
+    src: "../public/products/product1.jpg",
+  },
+];
 
 describe("Product card renders", () => {
   beforeEach(() => {
     render(
       <ChakraProvider>
-        <ProductCard
-          imgSource={product[0].src}
-          price={product[0].price}
-          productTitle={product[0].name}
-        />
+        <ProductCard product={product[0]} />
       </ChakraProvider>
     );
   });
@@ -48,11 +50,7 @@ describe("Product card renders", () => {
   it("matches the snapshot", () => {
     const { container } = render(
       <ChakraProvider>
-        <ProductCard
-          imgSource={product[0].src}
-          price={product[0].price}
-          productTitle={product[0].name}
-        />
+        <ProductCard product={product[0]} />
       </ChakraProvider>
     );
     expect(container).toMatchSnapshot();

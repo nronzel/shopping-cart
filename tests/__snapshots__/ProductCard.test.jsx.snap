@@ -11,7 +11,7 @@ exports[`Product card renders > matches the snapshot 1`] = `
       <img
         alt="product image"
         class="chakra-image css-aucjl3"
-        src="/public/products/product1.jpg"
+        src="../public/products/product1.jpg"
       />
       <div
         class="chakra-stack css-t7aooi"
@@ -29,7 +29,7 @@ exports[`Product card renders > matches the snapshot 1`] = `
         <p
           class="chakra-text css-1bpuy0u"
         >
-          75
+          $ 75
         </p>
       </div>
     </div>

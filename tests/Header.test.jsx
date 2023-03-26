@@ -7,7 +7,7 @@ describe("Header renders", () => {
   beforeEach(() => {
     render(
       <ChakraProvider>
-        <Header />
+        <Header cart={[]} />
       </ChakraProvider>
     );
   });
