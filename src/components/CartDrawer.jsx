@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  HStack,
   Drawer,
   DrawerBody,
   DrawerHeader,
@@ -10,6 +11,7 @@ import {
   Button,
   Text,
   Flex,
+  Divider,
 } from "@chakra-ui/react";
 import CartView from "./CartView";
 
@@ -21,6 +23,13 @@ const CartDrawer = ({
   onQuantityChange,
   removeFromCart,
 }) => {
+  const getCartTotal = () => {
+    const total = cart.reduce(
+      (sum, item) => sum + item.price * item.quantity,
+      0
+    );
+    return total.toFixed(2);
+  };
   return (
     <Drawer
       isOpen={isOpen}
@@ -48,7 +57,14 @@ const CartDrawer = ({
             </Flex>
           )}
         </DrawerBody>
-        <DrawerFooter>
+        <Divider />
+        <DrawerFooter justifyContent="space-between">
+          <HStack>
+            <Text fontSize="xl">total: </Text>
+            <Text fontSize="xl" fontWeight="black">
+              $ {getCartTotal()}
+            </Text>
+          </HStack>
           <Button variant="solid" colorScheme="pink">
             checkout
           </Button>
