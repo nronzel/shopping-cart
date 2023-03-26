@@ -26,12 +26,12 @@ const ProductCard = ({ product, addToCart }) => {
           w="100%"
           objectFit="cover"
           objectPosition="center"
-          src={imgSource}
+          src={product.src}
           borderRadius="lg"
           alt="product image"
         />
         <Stack spacing={3} mt={4}>
-          <Heading size="md">{productTitle}</Heading>
+          <Heading size="md">{product.name}</Heading>
           <Text fontWeight="thin">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor in
             dolorem fugit quo obcaecati facere!
@@ -41,14 +41,18 @@ const ProductCard = ({ product, addToCart }) => {
             fontSize="xl"
             fontWeight="bold"
           >
-            {price}
+            {`$ ${product.price}`}
           </Text>
         </Stack>
       </CardBody>
       <Divider />
       <CardFooter>
         <ButtonGroup>
-          <Button variant="solid" colorScheme="pink">
+          <Button
+            variant="solid"
+            colorScheme="pink"
+            onClick={() => addToCart(product)}
+          >
             add to cart
           </Button>
           <Button variant="outline" fontWeight="normal">
