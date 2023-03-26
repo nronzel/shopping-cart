@@ -24,14 +24,14 @@ const CartView = ({ item, onQuantityChange, removeFromCart }) => {
           <HStack>
             <Button
               size="xs"
-              onClick={() => onQuantityChange(item.quantity - 1, idex)}
+              onClick={() => onQuantityChange(item.quantity - 1, item.id)}
             >
               -
             </Button>
             <Text>Qty: {item.quantity}</Text>
             <Button
               size="xs"
-              onClick={() => onQuantityChange(item.quantity + 1, idex)}
+              onClick={() => onQuantityChange(item.quantity + 1, item.id)}
             >
               +
             </Button>
