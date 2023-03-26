@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 
-const ProductCard = ({ productTitle, imgSource, price }) => {
+const ProductCard = ({ product, addToCart }) => {
   return (
     <Card
       maxW="xs"
