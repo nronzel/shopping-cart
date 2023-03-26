@@ -1,12 +1,15 @@
-import { Flex, Grid } from "@chakra-ui/react";
+import { Flex, Grid, Spacer } from "@chakra-ui/react";
 import React from "react";
 import { Outlet } from "react-router-dom";
 import HomepageHero from "../components/HomepageHero";
 import CategoryCards from "../components/CategoryCards";
+import Header from "../sections/Header";
+import Footer from "../sections/Footer";
 
 const Home = () => {
   return (
-    <Flex direction="column">
+    <Flex direction="column" h="100vh" alignItems="center">
+      <Header />
       <HomepageHero />
       <Grid gridTemplateColumns={{ sm: "1fr 1fr", lg: "1fr 1fr 1fr 1fr" }}>
         <CategoryCards
@@ -21,6 +24,8 @@ const Home = () => {
         <CategoryCards imgSource="/categories/cables.jpg" hoverText="cables" />
         <Outlet />
       </Grid>
+      <Spacer />
+      <Footer />
     </Flex>
   );
 };
