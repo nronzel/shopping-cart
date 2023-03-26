@@ -1,32 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Button,
-  Drawer,
-  DrawerContent,
-  DrawerOverlay,
-  DrawerCloseButton,
   Flex,
   HStack,
   Heading,
   Text,
   useColorModeValue,
   useDisclosure,
-  DrawerHeader,
-  DrawerBody,
-  DrawerFooter,
 } from "@chakra-ui/react";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ThemeSwitcher from "../utils/ThemeSwitcher";
+import CartDrawer from "../components/CartDrawer";
 
-const Header = () => {
+const Header = ({ removeFromCart, cart, onQuantityChange }) => {
   const gradientBg =
     "linear-gradient(90deg, rgba(227,68,227,1) 0%, rgba(253,29,29,1) 100%)";
 
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
-
-  const { cart, setCart } = useState([]);
 
   return (
     <Flex
@@ -79,25 +71,14 @@ const Header = () => {
           </HStack>
         </Flex>
       </Flex>
-      <Drawer
+      <CartDrawer
         isOpen={isOpen}
-        placement="right"
         onClose={onClose}
-        finalFocusRef={btnRef}
-        size="sm"
-      >
-        <DrawerOverlay />
-        <DrawerContent>
-          <DrawerHeader>your cart</DrawerHeader>
-          <DrawerCloseButton />
-          <DrawerBody>products in cart</DrawerBody>
-          <DrawerFooter>
-            <Button variant="solid" colorScheme="pink">
-              checkout
-            </Button>
-          </DrawerFooter>
-        </DrawerContent>
-      </Drawer>
+        btnRef={btnRef}
+        removeFromCart={removeFromCart}
+        cart={cart}
+        onQuantityChange={onQuantityChange}
+      />
     </Flex>
   );
 };
