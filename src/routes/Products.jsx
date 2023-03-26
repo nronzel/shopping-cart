@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import ProductGrid from "../components/ProductGrid";
 import Header from "../sections/Header";
 import Footer from "../sections/Footer";
-import { Spacer, Flex } from "@chakra-ui/react";
+import { Spacer, Flex, useToast } from "@chakra-ui/react";
 
 const Products = () => {
   const [cart, setCart] = useState([]);
+  const toast = useToast();
 
   const handleAddToCart = (item) => {
     const index = cart.findIndex((cartItem) => cartItem.name === item.name);
@@ -17,6 +18,15 @@ const Products = () => {
     } else {
       setCart([...cart, { ...item, quantity: 1 }]);
     }
+
+
+    toast({
+      title: "item added to cart",
+      description: `${item.name} has been added to your cart.`,
+      status: "success",
+      duration: 2000,
+      isClosable: true,
+    });
   };
 
   const handleRemoveFromCart = (id) => {
@@ -29,10 +39,6 @@ const Products = () => {
     newCart[index].quantity = Math.max(newQuantity, 0);
     setCart(newCart);
   };
-
-  useEffect(() => {
-    console.log("Cart state updated", cart);
-  }, [cart]);
 
   return (
     <Flex direction="column" h="100vh" alignItems="center">
