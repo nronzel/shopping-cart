@@ -44,7 +44,7 @@ const CartDrawer = ({
         <DrawerCloseButton />
         <DrawerBody>
           {cart.length < 1 ? (
-            <Text>nothing in cart</Text>
+            <Text>cart is empty</Text>
           ) : (
             <Flex direction="column" gap={5}>
               {cart.map((item) => (
