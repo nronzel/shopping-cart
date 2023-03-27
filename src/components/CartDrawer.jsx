@@ -53,6 +53,7 @@ const CartDrawer = ({
                   item={item}
                   onQuantityChange={onQuantityChange}
                   removeFromCart={removeFromCart}
+                  cart={cart}
                 />
               ))}
             </Flex>

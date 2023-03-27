@@ -9,7 +9,9 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 
-const CartView = ({ item, onQuantityChange, removeFromCart }) => {
+const CartView = ({ item, onQuantityChange, removeFromCart, cart }) => {
+  const index = cart.findIndex((cartItem) => cartItem.id === item.id);
+
   return (
     <Card direction="row" alignItems="center" variant="outline">
       <HStack w="100%" p={4}>
@@ -24,14 +26,14 @@ const CartView = ({ item, onQuantityChange, removeFromCart }) => {
           <HStack>
             <Button
               size="xs"
-              onClick={() => onQuantityChange(item.quantity - 1, item.id)}
+              onClick={() => onQuantityChange(item.quantity - 1, index)}
             >
               -
             </Button>
             <Text>Qty: {item.quantity}</Text>
             <Button
               size="xs"
-              onClick={() => onQuantityChange(item.quantity + 1, item.id)}
+              onClick={() => onQuantityChange(item.quantity + 1, index)}
             >
               +
             </Button>
