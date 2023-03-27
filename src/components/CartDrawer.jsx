@@ -49,6 +49,7 @@ const CartDrawer = ({
             <Flex direction="column" gap={5}>
               {cart.map((item) => (
                 <CartView
+                  key={item.id}
                   item={item}
                   onQuantityChange={onQuantityChange}
                   removeFromCart={removeFromCart}
