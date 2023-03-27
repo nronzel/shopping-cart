@@ -70,7 +70,7 @@ describe("Product card renders", () => {
     expect(screen.getByText(/details/i)).toBeInTheDocument();
   });
 
-  it("add to cart button calls addToCart function when clicked", () => {
+  it("add to cart button calls addToCart function once when clicked", () => {
     const addToCart = vi.fn();
     const { getByRole } = render(
       <ChakraProvider>
@@ -78,11 +78,12 @@ describe("Product card renders", () => {
       </ChakraProvider>
     );
 
-    const addBtn = getByRole("button", {name: "add to cart" });
+    const addBtn = getByRole("button", { name: "add to cart" });
 
     fireEvent.click(addBtn);
 
     expect(addToCart).toHaveBeenCalledWith(product[0]);
+    expect(addToCart).toHaveBeenCalledTimes(1);
   });
 
   it("matches the snapshot", () => {
